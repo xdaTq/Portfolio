@@ -1,0 +1,23 @@
+/* about section */
+.gridAbout {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+}
+.aboutSection {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.cardAbout {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  text-align: left;
+}
+.cardAbout h2 {
+  color: #7f6af3;
+}
+.cardAbout p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}

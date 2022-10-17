@@ -1,7 +1,26 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { loadSpotify } from './api/spotify'
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import('../components/Navbar'), {
+  ssr: false
+})
+const Effects = dynamic(() => import('../components/Effects'), {
+  ssr: false
+})
+const WelcomePage = dynamic(() => import('../components/WelcomePage'), {
+  ssr: false
+})
+
+const SpotifySection = dynamic(() => import('../components/SpotifySection'), {
+  ssr: false
+})
+const AboutPage = dynamic(() => import('../components/AboutPage'), {
+  ssr: false
+})
+
+//import { loadSpotify } from './api/spotify'
 
 import {
   ApolloClient,
@@ -11,9 +30,7 @@ import {
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 
-export default function Home({ pinnedItems, spotifyData }) {
-
-  //console.log(spotifyData)
+export default function Home({ pinnedItems }) {
 
   return (
     <div>
@@ -25,139 +42,116 @@ export default function Home({ pinnedItems, spotifyData }) {
 
       <div id='home' ></div>
 
-      <nav className={styles.navigation}>
-        <ul className={styles.ulist}>
-          <li>
-            <a className={styles.navigationText} href="#home">
-              <p>Home</p>
-            </a>
-          </li>
-          <li>
-            <a className={styles.navigationText} href="#news">
-              <p>Blog</p>
-            </a>
-          </li>
-          <li>
-            <a className={styles.navigationText} href="#contact">
-              <p>News</p>
-            </a>
-          </li>
-          <li>
-            <a className={styles.navigationText} href="#about">
-              <p>About</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       <main className={styles.main}>
 
-        <div className={styles.spacing}>
-          <div className={`${styles.typewriter} ${styles.welcomeText}`}>
-            <h1>
-              <span className={styles.welcome}>Welcome</span>
-              <span>,</span>
-              <span>to my Portfolio.</span>
-            </h1>
-            <p>Hey, im <span className={styles.name}>xdaTq</span> <br></br> and you just found my personal space on the internet.</p>
-          </div>
-        </div>
+        <Effects />
+
+        <WelcomePage />
 
         <hr />
 
-        <h1 className={styles.title}> My <span className={styles.name}>Github</span> Projects </h1>
-        <div>
-          <p>
-            Here you can find some <span className={styles.name}>Github</span> Projects i have worked on. <br></br> 
-            These are my pinned repository's from <span className={styles.name}>Github</span> and they may change from time to time. 
-          </p>
-        </div>
+        <div id='github' data-aos='fade-up' className={styles.githubSection}>
 
-        <div className={styles.gridGithub}>
+          <h1 className={styles.title}> My <span className={styles.namePrimary}>Github</span> Projects </h1>
+          <div>
+            <p>
+              Here you can find some <span className={styles.namePrimary}>Github</span> Projects i have worked on. <br></br> 
+              These are my pinned repository's from <span className={styles.namePrimary}>Github</span> and they may change from time to time. 
+            </p>
+          </div>
 
-          {pinnedItems.map(item => {
-            return (
-              <a key={item.id} href={item.projectsUrl} target={'_blank'} className={styles.cardGithub}>
-                <h2> {item.name} &rarr;</h2>
-                <p>{item.description}</p>
-                <div className={styles.githubRow}>
-                  <p>⭐{item.stargazers.totalCount}</p>
-                  <p>👀 {item.watchers.totalCount}</p>
-                </div>
-                <p>lang: {item.primaryLanguage.name}</p>
-              </a>
-            )
-          })}
+          <div className={styles.gridGithub}>
+
+            {pinnedItems.map(item => {
+              return (
+                <a key={item.id} href={item.projectsUrl} className={styles.cardGithub}>
+                  <h2> {item.name} &rarr;</h2>
+                  <p>{item.description}</p>
+                  <div className={styles.githubRow}>
+                    <p>⭐{item.stargazers.totalCount}</p>
+                    <p>👀 {item.watchers.totalCount}</p>
+                  </div>
+                  <p>lang: {item.primaryLanguage.name}</p>
+                </a>
+              )
+            })}
+
+          </div>
 
         </div>
 
         <hr />
+        
+        <AboutPage />
 
-        <h1> My About Page </h1>
+        <SpotifySection />
 
-        <div id='about' className={styles.gridAbout}>
-
-          <div className={styles.cardAbout}>
-            <h2>About me</h2>
-            <p>Discover and deploy boilerplate example Next.js projects. awdawawdawawwadawawdaw wadawdaw dawdawdawdawda wdadawdawd. awdawd adaw dad.</p>
-          </div>
-
-          <div className={styles.cardAbout}>
-            <h2>About my intrests</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </div>
-
-          <div className={styles.cardAbout}>
-            <h2>About my blog</h2>
-            <p>Discover and deploy boilerplate example Next.js projects. </p>
-          </div>
-
-          <div className={styles.cardAbout}>
-            <h2>About my something</h2>
-            <p>Discover and deploy boilerplate example Next.js projects. </p>
-          </div>
-
-        </div>
-
-        <h2>
-          My Favotire Spotify Playlists
-        </h2>
-
-        <div className={styles.spotifySection}>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-spotify" className={styles.spotifyText} viewBox="0 0 16 16">
-              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"/>
-            </svg>
-            Playing - {spotifyData.item.name}
-          </p>
-        </div>
-
-        <iframe className={styles.spotify} src="https://open.spotify.com/embed/playlist/5Y1OQIglvQTo3Je5OklpB3?utm_source=generator" width="25%" height="80" frameBorder="0" loading="lazy"></iframe>
-        <br />
-        <iframe className={styles.spotify} src="https://open.spotify.com/embed/playlist/0POAwIQbLPfd46j64bhxoG?utm_source=generator" width="25%" height="80" frameBorder="0" loading="lazy"></iframe>
-        <br />
-        <iframe className={styles.spotify} src="https://open.spotify.com/embed/playlist/3c77gisfGQ7bqrE8Euh3Ri?utm_source=generator" width="25%" height="80" frameBorder="0" loading="lazy"></iframe>
+        <hr />
 
       </main >
 
-      <footer className={styles.footer}>
+      <div id='blog' className={styles.aboutSection}>
+
+        <h1> My Blog </h1>
+            
+        <h2>Coming <span className={styles.nameSecondary}>Soon</span>...</h2>
+
+      </div>
+
+
+
+
+      <footer id='links' className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by
           <span className={styles.powered}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
+
+        <div className={styles.links}>
+          <ul>
+            <li>
+              <a href="">
+
+                Github
+              </a>
+            </li>
+            <li>
+              <a href="">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Gamil
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Spotify
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Discord
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <a
           href="https://github.com/xdaTq"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Designed by{' '}
+          Designed by
           <span className={styles.designed}>
             <article>xdaTq - https://github.com/xdaTq</article>
           </span>
@@ -169,7 +163,7 @@ export default function Home({ pinnedItems, spotifyData }) {
 
 export async function getStaticProps() {
 
-  const spotifyData = await loadSpotify()
+  //const spotifyData = await loadSpotify()
 
   const httpLink = createHttpLink({
     uri: 'https://api.github.com/graphql',
@@ -179,7 +173,7 @@ export async function getStaticProps() {
     return {
       headers: {
         ...headers,
-        authorization: `Bearer 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`,
+        authorization: `Bearer ${process.env.github_token}`,
       }
     }
   });
@@ -229,8 +223,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      pinnedItems,
-      spotifyData
+      pinnedItems
     }
   }
 }

@@ -1,0 +1,18 @@
+/* navigation bar */
+.navigation {
+    width: 100%;
+  }
+  .navigationText {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  .ulist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1f2125;
+    box-shadow: 5px 8px 10px #121416;
+    display: flex;
+    justify-content: center;
+  }

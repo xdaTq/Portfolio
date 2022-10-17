@@ -13,49 +13,16 @@
   text-align: center;
 }
 
-
-
-/* navigation bar */
-.navigation {
-  width: 100%;
-}
-.navigationText {
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-.ulist {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #1f2125;
-  box-shadow: 5px 8px 10px #121416;
-  display: flex;
-  justify-content: center;
-}
-
-
-
-/* welcome text */
-.typewriter h1 {
-  overflow: hidden;
-  border-right: .15em solid #7f6af3;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation: 
-    typing 2.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
 .welcome {
   color: #7f6af3;
 }
-.welcomeText {
-  text-align: center;
-}
-.name {
+.namePrimary {
   color: #7f6af3;
 }
+.nameSecondary {
+  color: #daac4b;
+}
+
 
 
 
@@ -65,7 +32,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 1100px;
+}
+.githubSection {
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 .cardGithub {
   margin: 1rem;
@@ -76,8 +47,11 @@
   border: 1px solid #fff;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-  min-height: 350px;
+  max-width: 325px;
+  min-height: 355px;
+}
+.cardGithub h2 {
+  color: #ffca57;
 }
 .github {
   color: #7f6af3;
@@ -90,47 +64,31 @@
 
 
 
-/* about section */
-.gridAbout {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
-}
 
-.cardAbout {
-  margin: 1.5rem;
-  padding: 1.5rem;
-  text-align: left;
-}
-.cardAbout h2 {
-  color: #7f6af3;
-}
-.spotifySection {
-  display: block;
-}
-.spotify {
-  border-radius: 18px;
-}
-.spotifyText {
-  color: #1cd760;
-}
 
 
 /* footer section */
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
+  padding: 3rem 0;
   border-top: 2px solid #fff;
   justify-content: center;
-  align-items: center;
 }
 
 .footer a {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-grow: 1;
+}
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
 }
 
 
@@ -138,6 +96,8 @@
 /* etc */
 .cardGithub:hover,
 .cardGithub:focus,
+.spotifySection:hover,
+.spotifySection:focus,
 .cardGithub:active {
   color: rgb(127, 106, 243);
   border-color: rgb(127, 106, 243);
@@ -199,4 +159,13 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #7f6af3; }
+}
+/* zoom effect */
+@keyframes zoom {
+  0%{
+      transform: scale(1);
+  }
+  100%{
+      transform: scale(1.5);
+  }
 }
