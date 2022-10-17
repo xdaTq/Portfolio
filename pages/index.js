@@ -13,6 +13,8 @@ import { setContext } from '@apollo/client/link/context';
 
 export default function Home({ pinnedItems, spotifyData }) {
 
+  //console.log(spotifyData)
+
   return (
     <div>
       <Head>
@@ -57,19 +59,25 @@ export default function Home({ pinnedItems, spotifyData }) {
               <span>,</span>
               <span>to my Portfolio.</span>
             </h1>
-            <p>My name is Erwin <br></br> and you just found my personal space on the internet.</p>
+            <p>Hey, im <span className={styles.name}>xdaTq</span> <br></br> and you just found my personal space on the internet.</p>
           </div>
         </div>
 
         <hr />
 
-        <h1 className={styles.title}> My Github Projects </h1>
+        <h1 className={styles.title}> My <span className={styles.name}>Github</span> Projects </h1>
+        <div>
+          <p>
+            Here you can find some <span className={styles.name}>Github</span> Projects i have worked on. <br></br> 
+            These are my pinned repository's from <span className={styles.name}>Github</span> and they may change from time to time. 
+          </p>
+        </div>
 
         <div className={styles.gridGithub}>
 
           {pinnedItems.map(item => {
             return (
-              <a key={item.id} href={item.projectsUrl} className={styles.cardGithub}>
+              <a key={item.id} href={item.projectsUrl} target={'_blank'} className={styles.cardGithub}>
                 <h2> {item.name} &rarr;</h2>
                 <p>{item.description}</p>
                 <div className={styles.githubRow}>
@@ -115,7 +123,14 @@ export default function Home({ pinnedItems, spotifyData }) {
           My Favotire Spotify Playlists
         </h2>
 
-        <p>Playing - {spotifyData.item.name}</p>
+        <div className={styles.spotifySection}>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-spotify" className={styles.spotifyText} viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"/>
+            </svg>
+            Playing - {spotifyData.item.name}
+          </p>
+        </div>
 
         <iframe className={styles.spotify} src="https://open.spotify.com/embed/playlist/5Y1OQIglvQTo3Je5OklpB3?utm_source=generator" width="25%" height="80" frameBorder="0" loading="lazy"></iframe>
         <br />
@@ -164,7 +179,7 @@ export async function getStaticProps() {
     return {
       headers: {
         ...headers,
-        authorization: `Bearer ${process.env.github_token}`,
+        authorization: `Bearer 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`,
       }
     }
   });

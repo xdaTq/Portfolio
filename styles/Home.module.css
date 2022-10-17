@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 
@@ -52,6 +53,11 @@
 .welcomeText {
   text-align: center;
 }
+.name {
+  color: #7f6af3;
+}
+
+
 
 /* github grid with cards */
 .gridGithub {
@@ -99,9 +105,14 @@
 .cardAbout h2 {
   color: #7f6af3;
 }
-
+.spotifySection {
+  display: block;
+}
 .spotify {
   border-radius: 18px;
+}
+.spotifyText {
+  color: #1cd760;
 }
 
 
