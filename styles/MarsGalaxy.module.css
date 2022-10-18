@@ -107,13 +107,8 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-height: 900px) {
   .centerize {
-    top: 270%;
-  } 
-}
-@media screen and (max-width: 1000px) {
-  .centerize {
-    top: 275%;
+    top: 250%;
   }
 }
