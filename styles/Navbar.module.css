@@ -8,6 +8,7 @@
   line-height: 1.5;
 }
 .navigationText:hover,
+.navigationText:focus,
 .navigationText:active {
   color: #7f6af3;
 }
