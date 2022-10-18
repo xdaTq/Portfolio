@@ -40,7 +40,7 @@ export default function AboutPage() {
 
             <div className={styles.cardAbout}>
               <h2>Intrests</h2>
-              <p>I have a huge intrests in Music and Cars, Specialy cars from japan those 90s JDM vibes give me chills :), As for music i life all kind's of music specialy lo-fi </p>
+              <p>I have a huge intrests in Music and Cars, Specialy cars from japan those 90s JDM vibes give me chills :), As for music I like all kinds of music specialy lo-fi </p>
               <div className={styles.grid}>
                 <div className={styles.cardLang}>
                   Cars
