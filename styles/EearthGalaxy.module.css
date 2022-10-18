@@ -153,3 +153,9 @@
           left: 400px;
       }
   }
+
+@media screen and (max-height: 700px) {
+    .centerize {
+        top: 60%;
+    }
+}
