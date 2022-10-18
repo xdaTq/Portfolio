@@ -5,9 +5,8 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   position: absolute;
-  top: 200%;
+  top: 190%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
@@ -51,7 +50,7 @@
   right: -20px;
   transform: scale(0.5,0.5);
   box-shadow: inset -1px -1px 0 0px #949494;
-  animation: circulate 4s ease-out infinite;
+  animation: circulate 4.5s ease-out infinite;
 }
   
 .galaxy {
