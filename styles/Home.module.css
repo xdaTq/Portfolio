@@ -65,14 +65,16 @@
 
 /* footer section */
 .footer {
-  display: grid;
+  display: flex;
+  flex: 1;
   padding: 3rem 0;
   border-top: 2px solid #fff;
   justify-content: center;
 }
 .footer a {
-  display: grid;
+  display: flex;
   justify-content: center;
+  flex-grow: 1;
 }
 .footer ul {
   list-style-type: none;
@@ -113,7 +115,7 @@
 }
 
 @media (max-width: 600px) {
-  .footer {
+  .grid {
     width: 100%;
     flex-direction: column;
   }
@@ -128,3 +130,5 @@
     filter: invert(1);
   }
 }
+
+
