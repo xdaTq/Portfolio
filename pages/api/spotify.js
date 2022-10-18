@@ -1,4 +1,4 @@
-import axios from 'axios'
+/* import axios from 'axios'
 
 export async function loadSpotify() {
     // Call an external API endpoint to get posts
@@ -11,3 +11,4 @@ export async function loadSpotify() {
 
     return data
 }
+*/

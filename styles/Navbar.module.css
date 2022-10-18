@@ -1,18 +1,43 @@
 /* navigation bar */
 .navigation {
     width: 100%;
-  }
-  .navigationText {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  .ulist {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1f2125;
-    box-shadow: 5px 8px 10px #121416;
-    display: flex;
-    justify-content: center;
-  }
+}
+.navigationText {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.navigationText:hover,
+.navigationText:active {
+  color: #7f6af3;
+}
+.ulist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.namePrimary {
+  color: #7f6af3;
+}
+.nameSecondary {
+  color: #FFCA57;
+}
+
+/*
+.xdaTq {
+  float: left;
+  display: flex;
+  padding-left: 20px;
+}
+.github {
+  float: right;
+  display: flex;
+  padding-right: 20px;
+}
+.githubText {
+  vertical-align: middle;
+  padding: 5px;
+}
+*/

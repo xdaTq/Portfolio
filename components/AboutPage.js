@@ -4,29 +4,61 @@ export default function AboutPage() {
     return (
         <div className={styles.aboutSection}>
 
-          <h1> About Page </h1>
-          <p>Welcome to my about page here you will find some info about me and my hobbies.</p>
+          <h1>My <span className={styles.nameSecondary}>About</span> Page </h1>
+          <p>Welcome to my about page here you will find some info about me and my intrests.</p>
 
+          <br />
+
+          <h3><span className={styles.nameSecondary}>About</span> me</h3>
           <div className={styles.gridAbout}>
 
             <div className={styles.cardAbout}>
-              <h2>About me</h2>
-              <p>Discover and deploy boilerplate example Next.js projects. awdawawdawawwadawawdaw wadawdaw.</p>
+              <h2>Languages</h2>
+              <p>These are the different programming languages i have worked with in the past.</p>
+              <div className={styles.grid}>
+                <div className={styles.cardLang}>
+                  Javascript
+                </div>
+                <div className={styles.cardLang}>
+                  
+                  Typescript
+                </div>
+                <div className={styles.cardLang}>
+                  
+                  Python
+                </div>
+                <div className={styles.cardLang}>
+                  
+                  PHP
+                </div>
+                <div className={styles.cardLang}>
+                  
+                  GO
+                </div>
+              </div>
             </div>
 
             <div className={styles.cardAbout}>
-              <h2>About my intrests</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
+              <h2>Intrests</h2>
+              <p>I have a huge intrests in Music and Cars, Specialy cars from japan those 90s JDM vibes give me chills :), As for music i life all kind's of music specialy lo-fi </p>
+              <div className={styles.grid}>
+                <div className={styles.cardLang}>
+                  Cars
+                </div>
+                <div className={styles.cardLang}>
+                  Music
+                </div>
+              </div>
             </div>
 
             <div className={styles.cardAbout}>
               <h2>About my blog</h2>
-              <p>Discover and deploy boilerplate example Next.js projects. </p>
-            </div>
-
-            <div className={styles.cardAbout}>
-              <h2>About my something</h2>
-              <p>Discover and deploy boilerplate example Next.js projects. </p>
+              <p>My blog is generaly about my life and my intrests</p>
+              <div className={styles.grid}>
+                <div className={styles.cardLang}>
+                  Blog
+                </div>
+              </div>
             </div>
 
           </div>

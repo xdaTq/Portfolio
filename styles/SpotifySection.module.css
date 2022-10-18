@@ -1,23 +1,28 @@
 .spotifySection {
-  margin: 0;
-  padding: 0;
+  display: grid;
+  grid-gap: 10px;
+  place-items: center;
+  padding-top: 200px;  
+}
+.cardSpotify {
+  max-width: 300px;
   border: 2px solid #fff;
   border-radius: 19px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
 }
 .spotify {
   border-radius: 18px;
-  height: 100%;
   width: 100%;
 }
 .spotifyText {
   color: #1cd760;
+  vertical-align: middle;
+  padding: 5px;
 }
 
-.spotifySection:hover,
-.spotifySection:focus,
-.spotifySection:active {
-  color: rgb(127, 106, 243);
-  border-color: rgb(127, 106, 243);
+.cardSpotify:hover,
+.cardSpotify:focus,
+.cardSpotify:active {
+  color: #1cd760;
+  border-color: #1cd760;
 }

@@ -32,12 +32,13 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
+  background-color: #1f2125;
+  box-shadow: 5px 8px 10px #121416;
 }
 
 li a {
   display: block;
   color: white;
-  text-align: center;
   padding: 0px 16px;
   text-decoration: none;
 }
