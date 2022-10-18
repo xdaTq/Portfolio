@@ -1,11 +1,10 @@
 /* about section */
-.gridAbout {
+.aboutSection {
   display: grid;
-  grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
+  place-items: center;
 }
 .aboutSection {
-  padding-top: 150px;
   padding-bottom: 150px;
 }
 .cardAbout {

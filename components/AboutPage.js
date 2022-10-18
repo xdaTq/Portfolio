@@ -2,7 +2,7 @@ import styles from '../styles/AboutPage.module.css'
 
 export default function AboutPage() {
     return (
-        <div id='about' className={styles.aboutSection}>
+        <div className={styles.aboutSection}>
 
           <h1> About Page </h1>
           <p>Welcome to my about page here you will find some info about me and my hobbies.</p>

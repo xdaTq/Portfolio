@@ -1,24 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import dynamic from 'next/dynamic';
 
-const Navbar = dynamic(() => import('../components/Navbar'), {
-  ssr: false
-})
-const Effects = dynamic(() => import('../components/Effects'), {
-  ssr: false
-})
-const WelcomePage = dynamic(() => import('../components/WelcomePage'), {
-  ssr: false
-})
-
-const SpotifySection = dynamic(() => import('../components/SpotifySection'), {
-  ssr: false
-})
-const AboutPage = dynamic(() => import('../components/AboutPage'), {
-  ssr: false
-})
+import Navbar from '../components/Navbar'
+import WelcomePage from '../components/WelcomePage'
+import Effects from '../components/Effects'
+import AboutPage from '../components/AboutPage'
+import SpotifySection from '../components/SpotifySection'
 
 //import { loadSpotify } from './api/spotify'
 
@@ -52,14 +40,11 @@ export default function Home({ pinnedItems }) {
 
         <hr />
 
-        <div id='github' data-aos='fade-up' className={styles.githubSection}>
+        <div id='github' className={styles.githubSection}>
 
           <h1 className={styles.title}> My <span className={styles.namePrimary}>Github</span> Projects </h1>
           <div>
-            <p>
-              Here you can find some <span className={styles.namePrimary}>Github</span> Projects i have worked on. <br></br> 
-              These are my pinned repository's from <span className={styles.namePrimary}>Github</span> and they may change from time to time. 
-            </p>
+            <p>Here you can find some <span className={styles.namePrimary}>Github</span> Projects i have worked on. <br></br> These are my pinned repository's from <span className={styles.namePrimary}>Github</span> and they may change from time to time. </p>
           </div>
 
           <div className={styles.gridGithub}>
@@ -67,7 +52,7 @@ export default function Home({ pinnedItems }) {
             {pinnedItems.map(item => {
               return (
                 <a key={item.id} href={item.projectsUrl} className={styles.cardGithub}>
-                  <h2> {item.name} &rarr;</h2>
+                  <h2> {item.name}</h2>
                   <p>{item.description}</p>
                   <div className={styles.githubRow}>
                     <p>⭐{item.stargazers.totalCount}</p>
@@ -83,16 +68,20 @@ export default function Home({ pinnedItems }) {
         </div>
 
         <hr />
-        
-        <AboutPage />
 
+      <div id='about'></div>
+      </main >
+      
+      <section className={styles.aboutSection}>
+
+        <AboutPage />
         <SpotifySection />
 
-        <hr />
+      </section>
 
-      </main >
+      <hr />
 
-      <div id='blog' className={styles.aboutSection}>
+      <div id='blog'>
 
         <h1> My Blog </h1>
             
@@ -119,7 +108,6 @@ export default function Home({ pinnedItems }) {
           <ul>
             <li>
               <a href="">
-
                 Github
               </a>
             </li>
