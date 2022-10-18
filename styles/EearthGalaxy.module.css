@@ -1,4 +1,7 @@
 /*  !---  Space animation  ---!  */
+* {
+    color: #fff;
+}
 .centerize {
     animation: fadeInOnLoad ease 2.5s;
     animation-iteration-count: 1;

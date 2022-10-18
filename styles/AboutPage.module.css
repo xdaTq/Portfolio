@@ -1,4 +1,7 @@
 /* about section */
+* {
+  color: #fff;
+}
 .aboutSection {
   place-items: center;
   padding-bottom: 150px;

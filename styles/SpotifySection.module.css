@@ -1,3 +1,6 @@
+* {
+  color: #fff;
+}
 .spotifySection {
   display: grid;
   grid-gap: 10px;
