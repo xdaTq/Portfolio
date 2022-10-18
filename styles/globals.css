@@ -15,6 +15,7 @@
 
 html,
 body {
+  background: #1F2428;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
@@ -22,6 +23,7 @@ body {
 }
 
 hr {
+  background: #fff;
   width: 100%;
   margin-top: 100px;
   margin-bottom: 100px;
