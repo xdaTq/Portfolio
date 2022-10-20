@@ -1,14 +1,11 @@
 /*  !---  Space animation  ---!  */
 
+
 .centerize {
   animation: fadeInOnLoad ease 2.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
   position: absolute;
-  top: 190%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1;
+  margin-top: 8%;
 }
   
 .planet {
@@ -17,9 +14,8 @@
   background: #c4450b;
   border-radius: 100%;
   box-shadow: inset -35px -30px 0px 0px #92375673;
-  position: relative;
   overflow: hidden;
-  z-index:4;
+  z-index: 4;
 }
 .planet * {
   opacity: 0.6;
@@ -107,8 +103,8 @@
   }
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (min-width: 0px) and (max-width: 1355px)  {
   .centerize {
-    top: 120%;
+    display: none;
   }
 }

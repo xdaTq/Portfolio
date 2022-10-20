@@ -42,7 +42,7 @@ export default function Home({ pinnedItems }) {
         <div id='about'></div>
         <hr />
 
-        <section className={styles.aboutSection}>
+        <section className={styles.main}>
 
           <AboutPage />
 
