@@ -33,12 +33,18 @@
   max-width: 410px;
   min-height: 300px;
 }
+@media screen and (max-width: 400px) {
+  .cardAbout {
+    max-width: 300px;
+  }
+}
 .cardAbout:hover,
 .cardAbout:focus,
 .cardLang:active {
   border-color: #FFCA57;
 }
 .cardLang {
+  grid-row: 1 / 2;
   margin: 0;
   padding: 5px 5px;
   text-align: left;

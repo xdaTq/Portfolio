@@ -72,7 +72,7 @@ export default function Home({ pinnedItems }) {
                   <h2> {item.name}</h2>
                   <p>{item.description}</p>
                   <div className={styles.githubRow}>
-                    <p>⭐{item.stargazers.totalCount}</p>
+                    <p>⭐ {item.stargazers.totalCount}</p>
                     <p>👀 {item.watchers.totalCount}</p>
                   </div>
                   <p>lang: <span className={styles.namePrimary}>{item.primaryLanguage.name}</span></p>
@@ -106,7 +106,7 @@ export default function Home({ pinnedItems }) {
           >
             Designed by
             <span className={styles.designed}>
-              <article>xdaTq - https://github.com/xdaTq</article>
+              <article> xdaTq - https://github.com/xdaTq</article>
             </span>
           </a>
       </footer>

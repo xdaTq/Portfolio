@@ -79,11 +79,15 @@
   justify-content: center;
   flex-grow: 1;
 }
-.footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+.powered {
+  vertical-align: middle;
+  padding: 5px;
+}
+@media screen and (max-width: 420px) {
+  .footer a {
+    display: table-column;
+    flex-wrap: wrap;
+  }
 }
 
 
