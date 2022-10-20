@@ -3,6 +3,7 @@
 .aboutSection {
   place-items: center;
   padding-bottom: 150px;
+  color: #fff;
 }
 .gridAbout {
   display: flex;
@@ -29,8 +30,13 @@
   border: 1px solid #fff;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 420px;
+  max-width: 410px;
   min-height: 300px;
+}
+.cardAbout:hover,
+.cardAbout:focus,
+.cardLang:active {
+  border-color: #FFCA57;
 }
 .cardLang {
   margin: 0;

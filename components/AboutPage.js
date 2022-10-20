@@ -9,7 +9,6 @@ export default function AboutPage() {
 
           <br />
 
-          <h3><span className={styles.nameSecondary}>About</span> me</h3>
           <div className={styles.gridAbout}>
 
             <div className={styles.cardAbout}>

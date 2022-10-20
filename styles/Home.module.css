@@ -2,6 +2,7 @@
 
 .container {
   padding: 0 2rem;
+  color: #fff;
 }
 .main {
   min-height: 100vh;
@@ -12,6 +13,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #fff;
 }
 .welcome {
   color: #7f6af3;
@@ -34,6 +36,7 @@
   flex-wrap: wrap;
   max-width: 1100px;
   padding-bottom: 100px;
+  color: #fff;
 }
 .cardGithub {
   margin: 1rem;
@@ -66,11 +69,10 @@
 
 /* footer section */
 .footer {
+  color: #fff;
   display: flex;
-  flex: 1;
   padding: 3rem 0;
   border-top: 2px solid #fff;
-  justify-content: center;
 }
 .footer a {
   display: flex;
@@ -81,11 +83,9 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   display: flex;
-  justify-content: center;
-  justify-content: space-between;
 }
+
 
 
 
@@ -105,12 +105,4 @@
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-.powered {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-.designed {
-  height: 1em;
-  margin-left: 0.5rem;
 }

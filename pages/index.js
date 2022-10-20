@@ -39,8 +39,8 @@ export default function Home({ pinnedItems }) {
 
         <WelcomePage />
 
-        <div id='about'></div>
         <hr />
+        <div id='about'></div>
 
         <section className={styles.main}>
 
@@ -75,7 +75,7 @@ export default function Home({ pinnedItems }) {
                     <p>⭐{item.stargazers.totalCount}</p>
                     <p>👀 {item.watchers.totalCount}</p>
                   </div>
-                  <p>lang: {item.primaryLanguage.name}</p>
+                  <p>lang: <span className={styles.namePrimary}>{item.primaryLanguage.name}</span></p>
                 </a>
               )
             })}
@@ -89,57 +89,26 @@ export default function Home({ pinnedItems }) {
 
 
       <footer id='links' className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by
-          <span className={styles.powered}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-
-        <div className={styles.links}>
-          <ul>
-            <li>
-              <a href="">
-                Github
-              </a>
-            </li>
-            <li>
-              <a href="">
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Gamil
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Spotify
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Discord
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <a
-          href="https://github.com/xdaTq"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Designed by
-          <span className={styles.designed}>
-            <article>xdaTq - https://github.com/xdaTq</article>
-          </span>
-        </a>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered by
+            <span className={styles.powered}>
+              <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            </span>
+          </a>
+          <a
+            href="https://github.com/xdaTq"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Designed by
+            <span className={styles.designed}>
+              <article>xdaTq - https://github.com/xdaTq</article>
+            </span>
+          </a>
       </footer>
     </div >
   )

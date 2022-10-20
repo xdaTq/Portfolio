@@ -16,8 +16,8 @@
 html,
 body {
   background: #1F2428;
-  color: #fff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
@@ -57,5 +57,4 @@ a {
 
 * {
   box-sizing: border-box;
-  color: #fff;
 }
