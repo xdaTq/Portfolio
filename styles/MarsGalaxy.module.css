@@ -4,7 +4,6 @@
 .centerize {
   animation: fadeInOnLoad ease 2.5s;
   position: absolute;
-  z-index: 1;
   margin-top: 3%;
 }
   
@@ -42,10 +41,11 @@
   border-radius: 50px;
   background: #fafafa;
   top: 0;
+  z-index: -30;
   right: -20px;
   transform: scale(0.5,0.5);
   box-shadow: inset -1px -1px 0 0px #949494;
-  animation: circulate 4.5s ease-out infinite;
+  animation: circulate 3s ease-out infinite;
 }
   
 .galaxy {
@@ -86,10 +86,10 @@
   0%,100% {
     right: -20px;
     transform: scale(1, 1);
-    z-index: 8;
+    z-index: 1;
   } 25% {
     transform:scale(1, 1);
-    z-index: 2;
+    z-index: 1;
   } 40% {
     right: 180px;
     top: 180px;
