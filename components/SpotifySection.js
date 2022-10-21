@@ -4,7 +4,7 @@ export default function SpotifySection() {
     return (
         <div className={styles.spotifySection}>
             <h2>
-                My Favotire <span className={styles.spotifyText}>Spotify</span> Playlists
+                My Favourite <span className={styles.spotifyText}>Spotify</span> Playlists
             </h2>
             
             <span>
