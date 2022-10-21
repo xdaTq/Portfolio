@@ -164,3 +164,8 @@
         top: 70%;
     }
 }
+@media screen and (min-width: 420px) {
+    .centerize {
+        top: 70%;
+    }
+}
