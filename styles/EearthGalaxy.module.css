@@ -164,7 +164,12 @@
         top: 70%;
     }
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 450px){
+    .centerize {
+        top: 60%;
+    }
+}
+@media screen and (max-width: 400px) {
     .centerize {
         top: 65%;
     }

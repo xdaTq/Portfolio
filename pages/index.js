@@ -1,15 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
 
 import Navbar from '../components/Navbar'
 import WelcomePage from '../components/WelcomePage'
 import EarthGalaxy from '../components/EearthGalaxy'
-import AboutPage from '../components/AboutPage'
-import SpotifySection from '../components/SpotifySection'
-import MarsGalaxy from '../components/MarsGalaxy'
 
-//import { loadSpotify } from './api/spotify'
+const AboutPage = dynamic(() => import('../components/AboutPage'), {
+  suspense: true
+})
+const SpotifySection = dynamic(() => import('../components/SpotifySection'), {
+  suspense: true
+})
+const MarsGalaxy = dynamic(() => import('../components/MarsGalaxy'), {
+  suspense: true
+})
 
 import {
   ApolloClient,
@@ -18,6 +25,7 @@ import {
   createHttpLink
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
+//import { loadSpotify } from './api/spotify'
 
 export default function Home({ pinnedItems }) {
 
@@ -44,11 +52,15 @@ export default function Home({ pinnedItems }) {
 
         <section className={styles.main}>
 
-          <AboutPage />
+          <Suspense>
 
-          <MarsGalaxy />
+            <AboutPage />
 
-          <SpotifySection />
+            <MarsGalaxy />
+
+            <SpotifySection />
+            
+          </Suspense>
 
         </section>
 
