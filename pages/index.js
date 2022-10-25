@@ -114,7 +114,7 @@ export default function Home({ pinnedItems }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   //const spotifyData = await loadSpotify()
 
   const httpLink = createHttpLink({
