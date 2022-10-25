@@ -10,11 +10,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: max-content;
   padding-bottom: 100px;
 }
 .grid {
   display: flex;
+  flex-wrap: wrap;
   place-items: center;
   grid-gap: 5px;
 }
@@ -38,10 +38,15 @@
     max-width: 300px;
   }
 }
+@media screen and (min-width: 375px) {
+  .gridAbout {
+    display: ;
+  }
+}
 .cardAbout:hover,
 .cardAbout:focus,
 .cardLang:active {
-  border-color: #FFCA57;
+  border-color: #ffca57;
 }
 .cardLang {
   grid-row: 1 / 2;
@@ -69,5 +74,5 @@
   color: #7f6af3;
 }
 .nameSecondary {
-  color: #FFCA57;
+  color: #ffca57;
 }
