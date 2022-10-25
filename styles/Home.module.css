@@ -49,6 +49,8 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 325px;
   min-height: 355px;
+  width: 330px;
+  height: 360;
 }
 .cardGithub h2 {
   color: #ffca57;
