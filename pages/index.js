@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
+import { NextSeo } from 'next-seo'
 
 import Navbar from '../components/Navbar'
 import WelcomePage from '../components/WelcomePage'
@@ -25,6 +26,7 @@ import { setContext } from '@apollo/client/link/context'
 export default function Home({ pinnedItems }) {
   return (
     <div>
+      <NextSeo title='Home' />
       <Head>
         <title>xdaTq - Portfolio</title>
         <meta name='description' content='xdaTq - Portfolio' />
