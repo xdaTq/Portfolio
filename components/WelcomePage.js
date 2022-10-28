@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo'
 export default function WelcomePage() {
   return (
     <>
-      <NextSeo title='About' />
+      <NextSeo title='Home' />
       <div className={styles.welcomePage}>
         <div className={`${styles.typewriter} ${styles.welcomeText}`}>
           <h1>

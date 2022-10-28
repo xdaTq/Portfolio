@@ -1,39 +1,45 @@
-
 .welcomePage {
-  height: 700px;
+  height: 725px;
   color: #fff;
 }
 /* welcome text */
 .typewriter h1 {
-    overflow: hidden;
-    border-right: .15em solid #7f6af3;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: 
-      typing 2.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-  }
-  .welcomeText {
-    text-align: center;
-  }
-  .namePrimary {
-    color: #7f6af3;
-  }
-  .nameSecondary {
-    color: #FFCA57;
-  }
+  overflow: hidden;
+  border-right: 0.15em solid #7f6af3;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+.welcomeText {
+  text-align: center;
+}
+.namePrimary {
+  color: #7f6af3;
+}
+.nameSecondary {
+  color: #ffca57;
+}
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #7f6af3; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7f6af3;
+  }
 }
 @media screen and (max-width: 500px) {
   .typewriter h1 {

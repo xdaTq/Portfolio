@@ -26,7 +26,7 @@ import { setContext } from '@apollo/client/link/context'
 export default function Home({ pinnedItems }) {
   return (
     <div>
-      <NextSeo title='Home' />
+      <NextSeo title='Galaxy' />
       <Head>
         <title>xdaTq - Portfolio</title>
         <meta name='description' content='xdaTq - Portfolio' />

@@ -1,6 +1,6 @@
 export default {
   title: "xdaTq's Space",
-  titleTemplate: "%s | xdaTq's Space",
+  titleTemplate: "xdaTq's Space",
   description: 'My personal space on the internet.',
   siteUrl: `https://${process.env.NEXT_PUBLIC_DOMAIN}`,
   openGraph: {
