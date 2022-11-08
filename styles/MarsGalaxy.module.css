@@ -4,7 +4,7 @@
 .centerize {
   animation: fadeInOnLoad ease 2.5s;
   position: absolute;
-  margin-top: 3%;
+  margin-top: 10%;
 }
   
 .planet {
