@@ -9,7 +9,7 @@ export default function AboutPage() {
         <h1>
           My <span className={styles.nameSecondary}>About</span> Page{' '}
         </h1>
-        <p>Welcome to my about page here you will find some info about me and my intrests.</p>
+        <p>Welcome to my about page here you will find information about me and my intrests.</p>
 
         <br />
 
@@ -30,8 +30,9 @@ export default function AboutPage() {
           <div className={styles.cardAbout}>
             <h2>Intrests</h2>
             <p>
-              I have a huge intrests in Music and Cars, Specialy cars from japan those 90s JDM vibes
-              give me chills :), As for music I like all kinds of music specialy lo-fi{' '}
+              I have a huge intrests in Music and Cars especially cars from japan those 90s some of my personal 
+              favorites are S15 and 240sx huge fan of those :), As for music I like all kinds of music but for the most i listen to lo-fi
+              which i find is great for working or relaxing.{' '}
             </p>
             <div className={styles.grid}>
               <div className={styles.cardLang}>Cars</div>
@@ -41,7 +42,7 @@ export default function AboutPage() {
 
           <div className={styles.cardAbout}>
             <h2>About my blog</h2>
-            <p>My blog is generaly about my life and my intrests</p>
+            <p>Blog is coming soon...</p>
             <div className={styles.grid}>
               <div className={styles.cardLang}>Blog</div>
             </div>
