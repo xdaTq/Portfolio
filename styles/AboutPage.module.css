@@ -40,8 +40,8 @@
   }
 }
 @media screen and (min-width: 375px) {
-  .gridAbout {
-    display: block;
+  .cardAbout {
+    max-width: 250px;
   }
 }
 .cardAbout:hover,
