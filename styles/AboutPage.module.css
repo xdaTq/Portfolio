@@ -41,7 +41,7 @@
 }
 @media screen and (min-width: 375px) {
   .gridAbout {
-    display: ;
+    display: block;
   }
 }
 .cardAbout:hover,
