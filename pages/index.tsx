@@ -30,7 +30,7 @@ export default function Home({ pinnedItems }) {
       <Head>
         <title>xdaTq - Portfolio</title>
         <meta name='description' content='xdaTq - Portfolio' />
-        <meta name='viewport' content='device=device-width, initial-scale=1' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.ico' />
       </Head>
 
