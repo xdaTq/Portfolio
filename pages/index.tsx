@@ -25,7 +25,7 @@ import { setContext } from '@apollo/client/link/context'
 
 export default function Home({ pinnedItems }) {
   return (
-    <div>
+    <Html>
       <NextSeo title='Galaxy' />
       <Head>
         <title>xdaTq - Portfolio</title>
@@ -112,7 +112,7 @@ export default function Home({ pinnedItems }) {
           </span>
         </a>
       </footer>
-    </div>
+    </Html>
   )
 }
 
