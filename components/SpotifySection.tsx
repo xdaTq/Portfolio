@@ -25,6 +25,7 @@ export default function SpotifySection() {
 
       <div className={styles.cardSpotify}>
         <iframe
+          title="Spotify Playlist"
           className={styles.spotify}
           src='https://open.spotify.com/embed/playlist/5Y1OQIglvQTo3Je5OklpB3?utm_source=generator'
           width='100%'
@@ -36,6 +37,7 @@ export default function SpotifySection() {
 
       <div className={styles.cardSpotify}>
         <iframe
+          title="Spotify Playlist"
           className={styles.spotify}
           src='https://open.spotify.com/embed/playlist/0POAwIQbLPfd46j64bhxoG?utm_source=generator'
           width='100%'
@@ -47,6 +49,7 @@ export default function SpotifySection() {
 
       <div className={styles.cardSpotify}>
         <iframe
+          title="Spotify Playlist"
           className={styles.spotify}
           src='https://open.spotify.com/embed/playlist/3c77gisfGQ7bqrE8Euh3Ri?utm_source=generator'
           width='100%'
